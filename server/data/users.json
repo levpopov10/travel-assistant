@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "id": "mlwz3xob",
+      "name": "Lev",
+      "email": "popov1@gmail.com",
+      "passwordHash": "d91a2c988ec2b5582fc8f2b415bebf34:d5eb777f0490f397bc5ed4bb9e19c0891e7b69197bd27543afa97a841146b9ae1c27498874f5e450b68acfd62f8c90033e062ab7336f6895025a09555c814152",
+      "createdAt": "2026-02-21T23:52:07.026Z",
+      "searchHistory": [],
+      "sessions": [],
+      "pushSubscriptions": [],
+      "notificationPrefs": {
+        "enabled": false,
+        "weather": true,
+        "safety": true,
+        "reminders": true
+      },
+      "notificationQueue": [],
+      "role": "admin",
+      "plan": "pro",
+      "planStatus": "active",
+      "planExpiresAt": "2026-04-02T18:26:37.636Z",
+      "adminLevel": 2
+    },
+    {
+      "id": "mlzoh9wp",
+      "name": "popovlev",
+      "email": "popovlev910@gmail.com",
+      "passwordHash": "39bf77607f7c546f4e496c200487707a:c471d37ba81f687e629f94c850f3d7187e7615f36ff633fc055be2c9931c9a8a887a0a46eefa2058c131e6949b6027976b0f1e07a9f2784d2f6f6a3fe34299fe",
+      "createdAt": "2026-02-23T21:17:52.140Z",
+      "searchHistory": [
+        {
+          "id": "mm6un8ch-44199def",
+          "origin": "Sofia",
+          "destination": "Paris",
+          "createdAt": "2026-02-28T21:44:50.945Z"
+        },
+        {
+          "id": "mm59pbqu-82bf0541",
+          "origin": "Tokyo",
+          "destination": "Sofia",
+          "createdAt": "2026-02-27T19:10:50.550Z"
+        },
+        {
+          "id": "mm5886gn-371be11a",
+          "origin": "Varna",
+          "destination": "Barcelona",
+          "createdAt": "2026-02-27T18:29:30.935Z"
+        }
+      ],
+      "sessions": [
+        {
+          "tokenHash": "1d0cfbb8d69090d8961c8ad15fc1966c022c8fdaf2614dd81c951a61087759c6",
+          "createdAt": "2026-02-28T21:44:44.690Z",
+          "expiresAt": "2026-03-07T21:44:44.690Z"
+        },
+        {
+          "tokenHash": "c7aa70a215275214f109e6227165571631b4555eb68d9f5cfaa918f0938cf6d5",
+          "createdAt": "2026-02-27T19:12:08.632Z",
+          "expiresAt": "2026-03-06T19:12:08.632Z"
+        },
+        {
+          "tokenHash": "133664e4536b23335dc60935c2d3fe841a316da68b3d3c798cc51a872d47a92f",
+          "createdAt": "2026-02-25T22:30:09.114Z",
+          "expiresAt": "2026-03-04T22:30:09.114Z"
+        }
+      ],
+      "pushSubscriptions": [],
+      "notificationPrefs": {
+        "enabled": false,
+        "weather": true,
+        "safety": true,
+        "reminders": true
+      },
+      "notificationQueue": [],
+      "role": "user",
+      "plan": "free",
+      "planStatus": "inactive",
+      "planExpiresAt": "",
+      "adminLevel": 3
+    },
+    {
+      "id": "mm0t2467",
+      "name": "no_name",
+      "email": "kirill.kulmanakov@vum.bg",
+      "adminLevel": 3,
+      "passwordHash": "031c59958bfc6410fa41e56a4eb9431d:5145b1202153b45a96054b45cb9ea8713811a7f408604718175560f12445a4184bcd989e8c6dbebd45ffa234d5a065d102ac9fbc912aa89e2854b4029556dadc",
+      "createdAt": "2026-02-24T16:13:49.129Z",
+      "searchHistory": [
+        {
+          "id": "mm0t3irr-716a53c7",
+          "origin": "Varns",
+          "destination": "Lisbon",
+          "createdAt": "2026-02-24T16:14:54.663Z"
+        }
+      ],
+      "sessions": [],
+      "pushSubscriptions": [],
+      "notificationPrefs": {
+        "enabled": false,
+        "weather": true,
+        "safety": true,
+        "reminders": true
+      },
+      "notificationQueue": [],
+      "role": "user",
+      "plan": "free",
+      "planStatus": "inactive",
+      "planExpiresAt": ""
+    },
+    {
+      "id": "mm6ucuov",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "adminLevel": 1,
+      "role": "admin",
+      "plan": "free",
+      "planStatus": "inactive",
+      "planExpiresAt": "",
+      "passwordHash": "7abd7b56c9d8b813528319f1dff16e59:e21807f055aa7c3d06dda2af4d6919a01cbdc9af00d829d8fd527c8b287634ce9509ab76cb585902cb37f6c286b25206b58e00fea832654f46a1fab61c913369",
+      "createdAt": "2026-02-28T21:36:46.716Z",
+      "searchHistory": [],
+      "sessions": [
+        {
+          "tokenHash": "6153fc30e1219d16b0ebe8ffe9f1fea4e391204b561bd3979b191586fa015044",
+          "createdAt": "2026-03-03T21:20:08.246Z",
+          "expiresAt": "2026-03-10T21:20:08.246Z"
+        }
+      ],
+      "pushSubscriptions": [],
+      "notificationPrefs": {
+        "enabled": false,
+        "weather": true,
+        "safety": true,
+        "reminders": true
+      },
+      "notificationQueue": []
+    },
+    {
+      "id": "mmb42iog",
+      "name": "qwe",
+      "email": "qwe@gmail.com",
+      "role": "user",
+      "adminLevel": 3,
+      "plan": "free",
+      "planStatus": "inactive",
+      "planExpiresAt": "",
+      "passwordHash": "53e15dec94e5b4087cc58fd2efdd3095:326091c9de74851a4f922b06742d7e31e25970a44ce60a5136fbea805c811812a4680cfcfcbc3147ad6777c2c740f5dfcbf0025c27bd3bdf071ad189e2d2d564",
+      "createdAt": "2026-03-03T21:19:45.452Z",
+      "searchHistory": [],
+      "sessions": [],
+      "pushSubscriptions": [],
+      "notificationPrefs": {
+        "enabled": false,
+        "weather": true,
+        "safety": true,
+        "reminders": true
+      },
+      "notificationQueue": []
+    }
+  ]
+}

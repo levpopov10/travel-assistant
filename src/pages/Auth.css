@@ -1,0 +1,130 @@
+.auth-content {
+  --background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background-size: 400% 400%;
+  animation: auth-gradient-shift 15s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes auth-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.auth-content::part(scroll) {
+  padding-bottom: 22px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #1a1a2e;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  background: linear-gradient(135deg, #95e1d3 0%, #c8f5ed 100%);
+}
+
+.auth-card ion-card-content {
+  background: transparent !important;
+}
+
+.auth-card ion-card-title {
+  -webkit-text-stroke: 0.3px #000;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.auth-card ion-item {
+  --background: transparent !important;
+  --highlight-height: 0;
+}
+
+.auth-card ion-label {
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.auth-card ion-segment {
+  margin-bottom: 10px;
+  --background: rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+}
+
+.auth-card ion-segment-button {
+  --color: #1a1a2e;
+  --color-checked: #1a1a2e;
+  --indicator-color: #ffd93d;
+  font-weight: 700;
+}
+
+.auth-error {
+  color: #b91c1c;
+  font-weight: 700;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+ion-button {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button[color="primary"],
+ion-button[color="warning"],
+ion-button[color="danger"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button[fill="outline"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button[fill="clear"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+/* Black theme override */
+.auth-content {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 45%, #121212 100%) !important;
+  animation: none !important;
+}
+
+.auth-card {
+  background: linear-gradient(160deg, #0d0d0d 0%, #171717 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f5f5f5 !important;
+}
+
+.auth-card ion-label,
+.auth-card ion-segment-button {
+  color: #f5f5f5 !important;
+}
+
+.auth-card ion-segment {
+  --background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.auth-error {
+  color: #ffb4b4 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}

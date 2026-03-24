@@ -1,0 +1,91 @@
+.listings-card {
+  background: var(--ion-card-background, #111);
+  color: #e7eef6;
+}
+
+.listings-card ion-card-header ion-card-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.listings-card ion-list {
+  padding: 0;
+}
+
+.listings-card ion-item {
+  --padding-start: 16px;
+  --inner-padding-top: 10px;
+  --inner-padding-bottom: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: transparent;
+}
+
+.listings-card ion-item ion-label h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 6px 0;
+}
+
+.listings-card ion-item ion-label p {
+  color: #cbd6e0;
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+
+.listings-card ion-item ion-label p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.listings-card ion-badge {
+  background: #ffd54f;
+  color: #000;
+  font-weight: 700;
+}
+
+.listings-card ion-button {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+  border: 1px solid #111111;
+}
+
+.external-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.external-buttons ion-button {
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  font-size: 0.85rem;
+}
+
+.external-airbnb {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+  border: 1px solid #111111;
+}
+
+.external-booking {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+  border: 1px solid #111111;
+}
+
+/* Improve readability on smaller screens */
+@media (max-width: 600px) {
+  .listings-card ion-item ion-label h3 {
+    font-size: 1rem;
+  }
+  .listings-card ion-item ion-label p {
+    font-size: 0.9rem;
+  }
+}

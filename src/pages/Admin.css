@@ -1,0 +1,149 @@
+.admin-page {
+  --admin-surface: rgba(255, 255, 255, 0.04);
+  --admin-surface-2: rgba(255, 255, 255, 0.06);
+  --admin-border: rgba(255, 255, 255, 0.08);
+}
+
+.admin-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admin-toolbar-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.admin-toolbar-subtitle {
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.admin-card {
+  border: 1px solid var(--admin-border);
+  background: linear-gradient(180deg, var(--admin-surface), transparent 140%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.admin-filter-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.admin-error {
+  color: var(--ion-color-danger);
+  margin: 10px 0 0 0;
+}
+
+.admin-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  opacity: 0.9;
+}
+
+.admin-user-item {
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+  --min-height: 76px;
+}
+
+.admin-user-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-user-meta {
+  font-size: 12px;
+  opacity: 0.78;
+  margin-top: 4px;
+}
+
+.admin-kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--admin-surface-2);
+  border: 1px solid var(--admin-border);
+}
+
+.admin-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: white;
+}
+.admin-badge.level-1 { background: #d64545; }
+.admin-badge.level-2 { background: #e67e22; }
+.admin-badge.level-3 { background: #6c757d; }
+
+.admin-audit {
+  white-space: pre-wrap;
+  font-size: 12px;
+  opacity: 0.92;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  padding: 12px;
+  max-height: 480px;
+  overflow: auto;
+}
+
+@media (max-width: 720px) {
+  .admin-audit {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 720px) {
+  .admin-filter-row {
+    grid-template-columns: 1fr;
+  }
+  .admin-actions {
+    justify-content: flex-start;
+  }
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+}
+
+/* Ensure stacked layout on small screens */
+@media (max-width: 880px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-content {
+  width: 100%;
+}
+
+.dark-theme .admin-card {
+  --admin-surface: rgba(0, 0, 0, 0.12);
+  --admin-surface-2: rgba(0, 0, 0, 0.06);
+  --admin-border: rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, var(--admin-surface), transparent 140%);
+}
+

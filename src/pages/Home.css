@@ -1,0 +1,886 @@
+/* Global styles and modern vibrant design */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* adjust form fields for smoother appearance */
+ion-input {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --background: rgba(255,255,255,0.8);
+  --border-radius: 8px;
+  font-size: 1rem;
+}
+
+ion-button {
+  --border-radius: 999px;
+  font-weight: 600;
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button::part(native) {
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+ion-button[color="primary"],
+ion-button[color="warning"],
+ion-button[color="danger"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button[fill="outline"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+ion-button[fill="outline"]::part(native) {
+  border: 2px solid #111111;
+  background: #ffffff;
+}
+
+ion-button[fill="clear"] {
+  --background: #ffffff;
+  --color: #111111;
+  --border-color: #111111;
+}
+
+/* Styles for the home page and country selector and sections */
+/* MODERN VIBRANT DESIGN */
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  min-height: 100vh;
+  color: #1a1a2e;
+}
+
+.home-content::part(scroll) {
+  padding-bottom: calc(env(safe-area-inset-bottom));
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-content p,
+.home-content h2,
+.home-content h3 {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.welcome-user {
+  margin: 0 0 10px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.selector-wrapper {
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.selector-wrapper h2 {
+  margin-bottom: 16px;
+  font-size: 1.9rem;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.selected {
+  margin-top: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  font-size: 1.15rem;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* card spacing and colours */
+/* common card styles */
+.weather-card,
+.accommodation-card,
+.entertainment-card,
+.emergency-card,
+.style-card,
+.holiday-card,
+.transport-card,
+.travel-inputs-card,
+.advisor-card,
+.home-tabs-card,
+.finance-card,
+.safety-card,
+.checklist-card {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #1a1a2e;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.weather-card:hover,
+.accommodation-card:hover,
+.entertainment-card:hover,
+.emergency-card:hover,
+.style-card:hover,
+.holiday-card:hover,
+.transport-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Fix transparent backgrounds for IonItem and IonList */
+.weather-card ion-item,
+.accommodation-card ion-item,
+.entertainment-card ion-item,
+.emergency-card ion-item,
+.style-card ion-item,
+.holiday-card ion-item,
+.transport-card ion-item,
+.travel-inputs-card ion-item,
+.advisor-card ion-item,
+.finance-card ion-item,
+.safety-card ion-item,
+.checklist-card ion-item {
+  --background: transparent !important;
+  --highlight-height: 0;
+}
+
+.weather-card ion-list,
+.accommodation-card ion-list,
+.entertainment-card ion-list,
+.emergency-card ion-list,
+.style-card ion-list,
+.holiday-card ion-list,
+.transport-card ion-list,
+.travel-inputs-card ion-list,
+.advisor-card ion-list,
+.finance-card ion-list,
+.safety-card ion-list,
+.checklist-card ion-list {
+  --background: transparent !important;
+  background: transparent !important;
+}
+
+/* Ensure card content is transparent so gradient shows */
+.weather-card ion-card-content,
+.accommodation-card ion-card-content,
+.entertainment-card ion-card-content,
+.emergency-card ion-card-content,
+.style-card ion-card-content,
+.holiday-card ion-card-content,
+.transport-card ion-card-content,
+.travel-inputs-card ion-card-content,
+.advisor-card ion-card-content,
+.finance-card ion-card-content,
+.safety-card ion-card-content,
+.checklist-card ion-card-content {
+  background: transparent !important;
+}
+
+/* Add text stroke to card titles */
+.weather-card ion-card-title,
+.accommodation-card ion-card-title,
+.entertainment-card ion-card-title,
+.emergency-card ion-card-title,
+.style-card ion-card-title,
+.holiday-card ion-card-title,
+.transport-card ion-card-title,
+.travel-inputs-card ion-card-title,
+.advisor-card ion-card-title,
+.safety-card ion-card-title,
+.checklist-card ion-card-title {
+  -webkit-text-stroke: 0.3px #000;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Ensure IonItem text is visible */
+.weather-card ion-label,
+.accommodation-card ion-label,
+.entertainment-card ion-label,
+.emergency-card ion-label,
+.style-card ion-label,
+.holiday-card ion-label,
+.transport-card ion-label,
+.travel-inputs-card ion-label,
+.advisor-card ion-label,
+.finance-card ion-label,
+.safety-card ion-label,
+.checklist-card ion-label {
+  color: #1a1a2e;
+}
+
+/* Make currency selects match the light card style */
+.finance-card ion-select {
+  --placeholder-color: #6b7280;
+  --color: #111111;
+  color: #111111;
+}
+
+/* Global ion-select text color for options */
+ion-select {
+  --color: #ffffff;
+}
+
+/* Style ion-select alert dialog buttons and checkboxes - white menu, black text */
+ion-alert {
+  --background: #ffffff;
+  --backdrop-opacity: 0.55;
+  --color: #000000;
+  --button-color: #000000;
+  --button-background: transparent;
+  --border-radius: 12px;
+}
+
+ion-alert .alert-wrapper {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 12px;
+}
+
+ion-alert .alert-head,
+ion-alert .alert-title,
+ion-alert .alert-message,
+ion-alert .alert-checkbox-label,
+ion-alert .alert-radio-label {
+  color: #000000 !important;
+}
+
+ion-alert button,
+ion-alert .alert-button,
+ion-alert::part(button) {
+  color: #000000 !important;
+}
+
+/* Icons for radio/checkbox inside alert */
+ion-alert .alert-checkbox-icon,
+ion-alert .alert-radio-icon {
+  color: #000000 !important; /* icon (check) color */
+  border-color: rgba(0,0,0,0.35) !important;
+  background: transparent !important;
+}
+
+/* Checked state: black checkmark on light circle */
+ion-alert .alert-checkbox-button.ion-checked .alert-checkbox-icon,
+ion-alert .alert-radio-button.ion-checked .alert-radio-icon {
+  color: #000000 !important; /* black check */
+  background: rgba(255,255,255,0.95) !important; /* light filled circle */
+  border-color: rgba(0,0,0,0.2) !important;
+}
+
+/* Ensure option labels are black */
+ion-alert .alert-checkbox-label,
+ion-alert .alert-radio-label {
+  color: #000000 !important;
+}
+
+/* Also style popovers/action sheets if used for selects */
+ion-popover .popover-content,
+ion-action-sheet .action-sheet-group {
+  color: #000000;
+  background: #ffffff;
+}
+
+/* Fallback: set ionic CSS variables globally to ensure white menus */
+:root {
+  --ion-alert-background: #ffffff;
+  --ion-alert-color: #000000;
+  --ion-action-sheet-background: #ffffff;
+  --ion-action-sheet-color: #000000;
+  --ion-popover-background: #ffffff;
+  --ion-popover-color: #000000;
+}
+
+/* iOS-specific (web) adjustments: ensure action-sheet / alert use white background */
+.ios ion-action-sheet,
+.ios ion-action-sheet .action-sheet-group,
+ion-action-sheet,
+.action-sheet-group {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ios .action-sheet-button,
+ion-action-sheet .action-sheet-button,
+.action-sheet-button {
+  color: #000000 !important;
+}
+
+/* iOS alert wrapper */
+.ios ion-alert .alert-wrapper,
+ion-alert .alert-wrapper {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Radio / checkbox icons inside alerts (iOS) */
+.ios ion-alert .alert-radio-icon,
+.ios ion-alert .alert-checkbox-icon,
+ion-alert .alert-radio-icon,
+ion-alert .alert-checkbox-icon {
+  color: #000000 !important;
+  border-color: rgba(0,0,0,0.35) !important;
+  background: transparent !important;
+}
+
+/* Checked state: black checkmark on light circle */
+.ios ion-alert .alert-checkbox-button.ion-checked .alert-checkbox-icon,
+.ios ion-alert .alert-radio-button.ion-checked .alert-radio-icon,
+ion-alert .alert-checkbox-button.ion-checked .alert-checkbox-icon,
+ion-alert .alert-radio-button.ion-checked .alert-radio-icon {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: rgba(0,0,0,0.2) !important;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #ffe66d 0%, #fff8c4 100%);
+}
+
+.accommodation-card {
+  background: linear-gradient(135deg, #95e1d3 0%, #c8f5ed 100%);
+}
+
+.entertainment-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.emergency-card {
+  background: linear-gradient(135deg, #ff9999 0%, #ffe0e0 100%);
+}
+
+.style-card {
+  background: linear-gradient(135deg, #c9a0dc 0%, #e8d5f4 100%);
+}
+
+.holiday-card {
+  background: linear-gradient(135deg, #f4a261 0%, #fdd4a0 100%);
+}
+
+.transport-card {
+  background: linear-gradient(135deg, #4ecdc4 0%, #a8f7f1 100%);
+}
+
+.advisor-card {
+  background: linear-gradient(135deg, #f9d976 0%, #f39f86 100%);
+}
+
+.finance-card {
+  background: linear-gradient(135deg, #ffb347 0%, #ffcc33 100%);
+}
+
+.safety-card {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.checklist-card {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+/* tweak inputs and date cards for clarity */
+.travel-inputs-card {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.date-range-card {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #1a1a2e;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.date-range-card ion-item {
+  --background: transparent !important;
+}
+.date-range-card ion-card-content {
+  background: transparent !important;
+}
+
+.date-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.date-fields-grid ion-item {
+  --border-radius: 12px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  border: 1px solid rgba(26, 26, 46, 0.18);
+  border-radius: 12px;
+}
+
+.date-fields-grid ion-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.travel-inputs-card {
+  background: linear-gradient(135deg, #667eea 0%, #b4a7ff 100%);
+  margin-bottom: 32px;
+}
+
+.home-tabs-card {
+  background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+  margin-bottom: 16px;
+}
+
+.home-tabs-card ion-card-content {
+  padding: 8px;
+}
+
+.home-tabs-card ion-segment {
+  --background: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.home-tabs-card ion-segment-button {
+  --color: #d4d4d4;
+  --color-checked: #111111;
+  --background-checked: #ffffff;
+  --indicator-color: transparent;
+  min-height: 38px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+
+.home-tabs-card ion-segment-button::part(native) {
+  transition: background-color 220ms ease, color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  border-radius: 10px;
+}
+
+.home-tabs-card ion-segment-button.segment-button-checked::part(native) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.18);
+}
+
+.tab-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: tab-fade-in 220ms ease;
+}
+
+@keyframes tab-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emergency-card ion-item {
+  --min-height: auto;
+  --inner-padding-top: 10px;
+  --inner-padding-bottom: 10px;
+  --inner-padding-end: 0px;
+  --padding-start: 10px;
+  align-items: flex-start;
+}
+
+.emergency-card ion-item::part(detail-icon) {
+  display: none;
+}
+
+.emergency-status {
+  margin: 2px 0 10px;
+  font-size: 1rem;
+  font-weight: 1000;
+  color: #1f2937;
+}
+
+.emergency-status-ready {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.emergency-card ion-label h3,
+.emergency-card ion-label p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
+}
+
+.emergency-card ion-label {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.emergency-card .emergency-item {
+  --min-height: auto !important;
+}
+
+.emergency-card .emergency-item ion-label h3,
+.emergency-card .emergency-item ion-label p,
+.emergency-card .emergency-item ion-label a {
+  display: block;
+  width: 100%;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.emergency-card .emergency-item ion-label a {
+  color: #f5f5f5;
+  text-decoration: underline;
+}
+
+.safety-tips-list ion-item {
+  --min-height: 18px;
+  --padding-start: 6px;
+  --inner-padding-end: 6px;
+  --inner-padding-top: 0px;
+  --inner-padding-bottom: 0px;
+}
+
+.safety-tip-text {
+  font-size: 0.72rem !important;
+  line-height: 1.05;
+  opacity: 0.9;
+}
+
+.safety-tips-list ion-label {
+  margin: 0 !important;
+}
+
+.emergency-card {
+  margin-bottom: calc(120px + env(safe-area-inset-bottom)) !important;
+}
+
+/* entertainment chips */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 8px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.place-card {
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+  border-radius: 14px;
+  padding: 8px;
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.place-card-title {
+  font-weight: 700;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  color: #1a1a2e;
+}
+
+.place-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.place-links a {
+  text-decoration: none;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+@media (max-width: 420px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* travel styles */
+.styles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+/* Black theme override */
+.home-content {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 45%, #121212 100%) !important;
+  animation: none !important;
+  color: #f5f5f5 !important;
+}
+
+.home-content p,
+.home-content h2,
+.home-content h3,
+.welcome-user {
+  color: #f5f5f5 !important;
+}
+
+.weather-card p,
+.accommodation-card p,
+.entertainment-card p,
+.emergency-card p,
+.style-card p,
+.holiday-card p,
+.transport-card p,
+.travel-inputs-card p,
+.advisor-card p,
+.finance-card p,
+.date-range-card p,
+.safety-card p,
+.checklist-card p,
+.weather-card span,
+.accommodation-card span,
+.entertainment-card span,
+.emergency-card span,
+.style-card span,
+.holiday-card span,
+.transport-card span,
+.travel-inputs-card span,
+.advisor-card span,
+.finance-card span,
+.date-range-card span,
+.safety-card span,
+.checklist-card span {
+  color: #111111 !important;
+}
+
+.weather-card a,
+.accommodation-card a,
+.entertainment-card a,
+.emergency-card a,
+.style-card a,
+.holiday-card a,
+.transport-card a,
+.travel-inputs-card a,
+.advisor-card a,
+.finance-card a,
+.date-range-card a,
+.safety-card a,
+.checklist-card a {
+  color: #111111 !important;
+  text-decoration: underline;
+}
+
+.welcome-user {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.weather-card,
+.accommodation-card,
+.entertainment-card,
+.emergency-card,
+.style-card,
+.holiday-card,
+.transport-card,
+.travel-inputs-card,
+.advisor-card,
+.home-tabs-card,
+.finance-card,
+.date-range-card,
+.safety-card,
+.checklist-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #111111 !important;
+}
+
+.weather-card ion-label,
+.accommodation-card ion-label,
+.entertainment-card ion-label,
+.emergency-card ion-label,
+.style-card ion-label,
+.holiday-card ion-label,
+.transport-card ion-label,
+.travel-inputs-card ion-label,
+.advisor-card ion-label,
+.date-range-card ion-label,
+.safety-card ion-label,
+.checklist-card ion-label {
+  color: #111111 !important;
+}
+
+.weather-card ion-card-title,
+.accommodation-card ion-card-title,
+.entertainment-card ion-card-title,
+.emergency-card ion-card-title,
+.style-card ion-card-title,
+.holiday-card ion-card-title,
+.transport-card ion-card-title,
+.travel-inputs-card ion-card-title,
+.advisor-card ion-card-title,
+.finance-card ion-card-title,
+.date-range-card ion-card-title,
+.safety-card ion-card-title,
+.checklist-card ion-card-title {
+  color: #111111 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+.weather-card strong,
+.accommodation-card strong,
+.entertainment-card strong,
+.emergency-card strong,
+.style-card strong,
+.holiday-card strong,
+.transport-card strong,
+.travel-inputs-card strong,
+.advisor-card strong,
+.finance-card strong,
+.date-range-card strong,
+.safety-card strong,
+.checklist-card strong,
+.weather-card h3,
+.accommodation-card h3,
+.entertainment-card h3,
+.emergency-card h3,
+.style-card h3,
+.holiday-card h3,
+.transport-card h3,
+.travel-inputs-card h3,
+.advisor-card h3,
+.finance-card h3,
+.date-range-card h3,
+.safety-card h3,
+.checklist-card h3 {
+  color: #111111 !important;
+}
+
+.weather-card ion-input,
+.accommodation-card ion-input,
+.entertainment-card ion-input,
+.emergency-card ion-input,
+.style-card ion-input,
+.holiday-card ion-input,
+.transport-card ion-input,
+.travel-inputs-card ion-input,
+.advisor-card ion-input,
+.finance-card ion-input,
+.date-range-card ion-input,
+.safety-card ion-input,
+.checklist-card ion-input {
+  --color: #111111 !important;
+  --placeholder-color: #6b7280 !important;
+  color: #111111 !important;
+}
+
+.place-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.place-card-title {
+  color: #111111 !important;
+}
+
+.place-links a {
+  color: #111111 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+}
+
+.logout-button {
+  --border-radius: 999px !important;
+  --background: #ffffff !important;
+  --color: #111111 !important;
+  --box-shadow: none !important;
+  --padding-start: 14px !important;
+  --padding-end: 14px !important;
+  min-height: 34px;
+}
+
+.logout-button::part(native) {
+  border-radius: 999px !important;
+  padding: 0 14px !important;
+}
+
+/* High-contrast buttons for flight/accommodation service actions */
+.flights-card ion-button,
+.accommodation-card ion-button {
+  --background: #ffffff !important;
+  --color: #111111 !important;
+  --border-color: #111111 !important;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.flights-card ion-button[color="danger"],
+.accommodation-card ion-button[color="danger"] {
+  --background: #ffffff !important;
+  --color: #111111 !important;
+  --border-color: #111111 !important;
+}
+
+.service-btn::part(native) {
+  border-radius: 999px !important;
+  border-width: 2px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2px;
+  min-height: 38px;
+  padding: 0 14px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.service-btn-light {
+  --background: #ffffff !important;
+  --color: #111111 !important;
+  --border-color: #111111 !important;
+}
+
+.service-btn-accent {
+  --background: #ffffff !important;
+  --color: #111111 !important;
+  --border-color: #111111 !important;
+}

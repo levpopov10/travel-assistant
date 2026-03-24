@@ -1,0 +1,22 @@
+.marketplace-embed {
+  background: var(--ion-card-background, #0f1113);
+  color: #e7eef6;
+}
+
+.marketplace-embed h4 {
+  margin: 8px 0 4px 0;
+  color: #fff;
+}
+
+.embed-loading {
+  color: #cbd6e0;
+  margin-bottom: 8px;
+}
+
+.marketplace-embed ion-item ion-label h3 {
+  color: #fff;
+}
+
+.marketplace-embed ion-item ion-label p {
+  color: #cbd6e0;
+}
